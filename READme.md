@@ -1,46 +1,47 @@
-1. Для корректной работы веб-приложения необходимо установить несколько библиотек Python. Для этого в консоли необходимо по очереди прописать команды: 
+1. Р”Р»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹ РІРµР±-РїСЂРёР»РѕР¶РµРЅРёСЏ РЅРµРѕР±С…РѕРґРёРјРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р±РёР±Р»РёРѕС‚РµРє Python. Р”Р»СЏ СЌС‚РѕРіРѕ РІ РєРѕРЅСЃРѕР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕ РѕС‡РµСЂРµРґРё РїСЂРѕРїРёСЃР°С‚СЊ РєРѕРјР°РЅРґС‹: 
 pip install dash, 
 pip install dash_html_components, 
 pip install dash_core_components, 
 pip install plotly.graph_objs, 
-pip install pyodbc, 
+pip install pyodbc,
+pip install pypyodbc,
 pip install pandas, 
 pip install pysyge, 
 pip install Dispatch.
-Внимание: если после установке библиотеки Dash появляется эта ошибка ("UnsupportedOperation: not writable") вам необходимо отредактировать определение функции echo по адресу ../site-packages/click/utils.py.
-Значение по умолчанию для параметра файла должно быть sys.stdout вместо None. Тоже самое нужно сделать для определения функции secho по адресу ../site-packages/click/termui.py
+Р’РЅРёРјР°РЅРёРµ: РµСЃР»Рё РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРµ Р±РёР±Р»РёРѕС‚РµРєРё Dash РїРѕСЏРІР»СЏРµС‚СЃСЏ СЌС‚Р° РѕС€РёР±РєР° ("UnsupportedOperation: not writable") РІР°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РѕРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё echo РїРѕ Р°РґСЂРµСЃСѓ ../site-packages/click/utils.py.
+Р—РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РїР°СЂР°РјРµС‚СЂР° С„Р°Р№Р»Р° РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ sys.stdout РІРјРµСЃС‚Рѕ None. РўРѕР¶Рµ СЃР°РјРѕРµ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ С„СѓРЅРєС†РёРё secho РїРѕ Р°РґСЂРµСЃСѓ ../site-packages/click/termui.py
 
-Эта ошибка связана с обновлением анаконды.
+Р­С‚Р° РѕС€РёР±РєР° СЃРІСЏР·Р°РЅР° СЃ РѕР±РЅРѕРІР»РµРЅРёРµРј Р°РЅР°РєРѕРЅРґС‹.
 
-2. С помощью Jupyter Notebook запустите файл Parser_Log.ipynb. При завершении его работы в корневую папку будут добавлены csv-файлы для базы данных.
-3. Запустите с помощью Jupyter Notebook запустите файл Access.ipynb для создания базы данных.
-4. Описание БД:
+2. РЎ РїРѕРјРѕС‰СЊСЋ Jupyter Notebook Р·Р°РїСѓСЃС‚РёС‚Рµ С„Р°Р№Р» Parser_Log.ipynb. РџСЂРё Р·Р°РІРµСЂС€РµРЅРёРё РµРіРѕ СЂР°Р±РѕС‚С‹ РІ РєРѕСЂРЅРµРІСѓСЋ РїР°РїРєСѓ Р±СѓРґСѓС‚ РґРѕР±Р°РІР»РµРЅС‹ csv-С„Р°Р№Р»С‹ РґР»СЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С….
+3. Р—Р°РїСѓСЃС‚РёС‚Рµ СЃ РїРѕРјРѕС‰СЊСЋ Jupyter Notebook Р·Р°РїСѓСЃС‚РёС‚Рµ С„Р°Р№Р» Access.ipynb РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С… (РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№ РіРѕС‚РѕРІР°СЏ Р±Р°Р·Р° РґР°РЅРЅС‹С… РїСЂРёР»Р°РіР°РµС‚СЃСЏ).
+4. РћРїРёСЃР°РЅРёРµ Р‘Р”:
 
-Таблица Basket:
+РўР°Р±Р»РёС†Р° Basket:
 PRIMARY KEY (ID_Basket)
 FOREIGN KEY (IP) REFERENCES Location(IP)
 FOREIGN KEY (Goods) REFERENCES Product(ID_Product)
 FOREIGN KEY (Cart_id) REFERENCES Buy(Cart_id)
 
-Таблица Product:
+РўР°Р±Р»РёС†Р° Product:
 PRIMARY KEY (ID_Product)
 FOREIGN KEY (Category) REFERENCES Category(ID_Category)
 
-Таблица Buy:
+РўР°Р±Р»РёС†Р° Buy:
 PRIMARY KEY (Cart_id)
 FOREIGN KEY (IP) REFERENCES Location(IP)
 
-Таблица Category:
+РўР°Р±Р»РёС†Р° Category:
 PRIMARY KEY (ID_Category)
 
-Таблица Location:
+РўР°Р±Р»РёС†Р° Location:
 PRIMARY KEY (IP)
 
-Таблица Visit:
+РўР°Р±Р»РёС†Р° Visit:
 PRIMARY KEY (Visit)
 FOREIGN KEY (IP) REFERENCES Location(IP)
 FOREIGN KEY (Category) REFERENCES Category(ID_Category)
 FOREIGN KEY (Product) REFERENCES Product(ID_Product)
 
-5. Перед запуском app.py замените в переменной conn_str замените путь до базы.
-6. После запуска приложения перейдите на предложенный адрес.  
+5. РџРµСЂРµРґ Р·Р°РїСѓСЃРєРѕРј app.py Р·Р°РјРµРЅРёС‚Рµ РІ РїРµСЂРµРјРµРЅРЅРѕР№ conn_str Р·Р°РјРµРЅРёС‚Рµ РїСѓС‚СЊ РґРѕ Р±Р°Р·С‹.
+6. РџРѕСЃР»Рµ Р·Р°РїСѓСЃРєР° РїСЂРёР»РѕР¶РµРЅРёСЏ РїРµСЂРµР№РґРёС‚Рµ РЅР° РїСЂРµРґР»РѕР¶РµРЅРЅС‹Р№ Р°РґСЂРµСЃ.  
